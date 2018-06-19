@@ -14,6 +14,10 @@ mongoose.connect('mongodb://localhost/CRMdb')
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+//Serve Static Files
+app.use(express.static('public'));
+
+
 routes(app);
 
 //Set Public Folder
